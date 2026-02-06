@@ -1,2 +1,2 @@
 # reto-bx-backend
-Backend del desafío técnicode BX, desarrollado con Node.js, Express y MongoDB Atlas.
+Backend del desafío técnico de BX, desarrollado con Node.js, Express y MongoDB Atlas.
