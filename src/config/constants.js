@@ -1,0 +1,5 @@
+module.exports = {
+  RICK_AND_MORTY_MAX: 826,
+  POKEMON_MAX: 151,
+  SUPERHERO_MAX: 731
+};
