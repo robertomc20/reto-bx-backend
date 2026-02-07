@@ -10,7 +10,7 @@ const CharacterSchema = new mongoose.Schema(
     source: {
       type: String,
       required: true,
-      enum: ['rick_morty', 'pokemon', 'superhero'],
+      enum: ['rickandmorty', 'pokemon', 'superhero'],
       index: true
     },
     externalId: {
