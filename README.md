@@ -125,6 +125,30 @@ GET http://localhost:3001/api/metrics/top-disliked
 5.- Obtener último personaje votado:
 GET http://localhost:3001/api/metrics/last
 
+6.- Votar "Me gusta" por pikachu:
+POST http://localhost:3001/api/votes
+BODY:
+{
+  "source": "pokemon",
+  "externalId": "25",
+  "name": "pikachu",
+  "vote": "like"
+}
+
+7.- Votar "No me gusta" por pikachu:
+POST http://localhost:3001/api/votes
+BODY:
+{
+  "source": "pokemon",
+  "externalId": "25",
+  "name": "pikachu",
+  "vote": "dislike"
+}
+
+8.- Obtener estatus de Pikachu:
+GET http://localhost:3001/api/characters/status/pikachu 
+
+
 ### Autor
 Desarrollado por Roberto Marihuán Crisóstomo
 Desafío técnico BX

@@ -1,6 +1,7 @@
 const rickMortyService = require("../services/rickAndMorty.service");
 const pokemonService = require("../services/pokemon.service");
 const superheroService = require("../services/superhero.service");
+const Character = require("../models/Character.model");
 
 const getRandomCharacter = async (req, res) => {
   try {
@@ -34,6 +35,37 @@ const getRandomCharacter = async (req, res) => {
   }
 };
 
+const getPikachuStatus = async (req, res) => {
+  try {
+    const pikachu = await Character.findOne({
+      source: "pokemon",
+      externalId: "25",
+    });
+
+    if (!pikachu) {
+      return res.status(404).json({
+        exists: false,
+        message: "Pikachu has not yet been evaluated.",
+      });
+    }
+
+    return res.json({
+      exists: true,
+      data: {
+        name: pikachu.name,
+        likes: pikachu.likes,
+        dislikes: pikachu.dislikes,
+        lastEvaluatedAt: pikachu.lastEvaluatedAt,
+      },
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: "Error obtaining Pikachu status",
+    });
+  }
+};
+
 module.exports = {
   getRandomCharacter,
+  getPikachuStatus,
 };
