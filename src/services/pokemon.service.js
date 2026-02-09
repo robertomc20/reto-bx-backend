@@ -1,5 +1,5 @@
-const axios = require('axios');
-const { POKEMON_MAX } = require('../config/constants');
+const axios = require("axios");
+const { POKEMON_MAX } = require("../config/constants");
 
 const BASE_URL = process.env.POKEMON_API;
 
@@ -10,12 +10,12 @@ const getRandomPokemon = async () => {
 
   return {
     name: data.name,
-    source: 'pokemon',
+    source: "pokemon",
     externalId: data.id.toString(),
-    image: data.sprites.front_default
+    image: data.sprites.front_default,
   };
 };
 
 module.exports = {
-  getRandomPokemon
+  getRandomPokemon,
 };
