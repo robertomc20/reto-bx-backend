@@ -148,6 +148,9 @@ BODY:
 8.- Obtener estatus de Pikachu:
 GET http://localhost:3001/api/characters/status/pikachu 
 
+### TEST DE INTEGRACIÓN
+Para ejecutar el test de integración, una vez realizado los pasos anteriores para instalar y ejecutar el proyecto:
+npm run test
 
 ### Autor
 Desarrollado por Roberto Marihuán Crisóstomo
