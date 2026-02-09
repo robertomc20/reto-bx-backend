@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { POKEMON_MAX } = require('../config/constants');
 
-const BASE_URL = 'https://pokeapi.co/api/v2/pokemon';
+const BASE_URL = process.env.POKEMON_API;
 
 const getRandomPokemon = async () => {
   const randomId = Math.floor(Math.random() * POKEMON_MAX) + 1;

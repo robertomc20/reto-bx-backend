@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { SUPERHERO_MAX } = require('../config/constants');
 
-const BASE_URL = `https://superheroapi.com/api/${process.env.SUPERHERO_API_KEY}`;
+const BASE_URL = `${process.env.SUPERHERO_API}/${process.env.SUPERHERO_API_KEY}`;
 
 const getRandomHero = async () => {
   const randomId = Math.floor(Math.random() * SUPERHERO_MAX) + 1;
