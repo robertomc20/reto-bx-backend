@@ -6,13 +6,13 @@ const PORT = process.env.PORT || 3001;
 
 const startServer = async () => {
   try {
-    await connectDB(); // 👈 AQUÍ se conecta Mongo
+    await connectDB();
 
     app.listen(PORT, () => {
-      console.log(`🚀 Backend running on http://localhost:${PORT}`);
+      console.log(`Backend running on http://localhost:${PORT}`);
     });
   } catch (error) {
-    console.error("❌ Error starting server");
+    console.error("Error starting server");
     process.exit(1);
   }
 };
