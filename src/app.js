@@ -7,7 +7,15 @@ const metricsRoutes = require("./routes/metrics.routes");
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: [
+    process.env.FRONTEND_URL, // front local
+  ],
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/api/characters", characterRoutes);
